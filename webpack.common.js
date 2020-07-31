@@ -24,5 +24,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html"
     })
-  ]
+  ],
+  optimization: {
+      splitChunks: {
+          cacheGroups: {
+              commons: {
+                  name: "commons",
+                  chunks: "all"
+              }
+          }
+      }
+  }
 };
