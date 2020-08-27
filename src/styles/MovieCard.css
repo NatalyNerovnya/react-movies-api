@@ -1,0 +1,33 @@
+.card {
+    color: #8e8e8e;
+    display: inline-block;
+    height: 35rem;
+    width: 33%;
+    min-width: 30rem;
+}
+
+.year {
+    border: solid 1px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+}
+
+.title {
+    display: inline-block;
+    width: 70%;
+    font-size: 2rem;
+}
+
+.image {
+    width: 99%;
+    height: 99%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+p {
+    color: #808080;
+}
