@@ -1,0 +1,9 @@
+.counter-container {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.counter-container .count{
+    font-weight: bold;
+    font-size: larger;
+}

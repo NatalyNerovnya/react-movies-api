@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import "../styles/ErrorBoundary.css";
+
 export default class ErrorBoundary extends Component{
   constructor(props){
     super(props);
@@ -14,7 +16,7 @@ export default class ErrorBoundary extends Component{
   
   render(){
     if(this.state.hasError){
-      return <span className={styles.span}>
+      return <span className="error">
       Oops... Something went wrong. Please, try to refresh the page.
     </span>
     }
