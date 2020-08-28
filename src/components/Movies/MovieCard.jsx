@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-import '../styles/MovieCard.css';
+import '../../styles/MovieCard.css';
 
 const MovieCard = (props) => {
     return <div className="card">

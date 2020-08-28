@@ -1,5 +1,5 @@
 import React from 'react';
-import Movies from './../components/Movies.jsx';
+import Movies from '../components/Movies/Movies.jsx';
 
  import '../styles/MainContainer.css';
 

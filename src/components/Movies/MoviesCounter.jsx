@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import "../styles/MoviesCounter.css"
+import "../../styles/MoviesCounter.css"
 
 const MoviesCounter = (props) => {
     return <div className="counter-container">
