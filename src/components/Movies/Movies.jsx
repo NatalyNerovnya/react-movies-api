@@ -1,6 +1,6 @@
 import React from "react";
-import MovieCard from './MovieCard.jsx';
-import MoviesCounter from "./MoviesCounter.jsx";
+import MovieCard from './MovieCard/';
+import MoviesCounter from "./MoviesCounter";
 
 const Movies = () => {
     let movies = [{

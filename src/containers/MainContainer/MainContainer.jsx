@@ -1,8 +1,5 @@
 import React from 'react';
-import Movies from '../components/Movies/Movies.jsx';
-
- import '../styles/MainContainer.css';
-
+import Movies from '../../components/Movies';
 
 const MainContainer = () => {
     return <div className="container">

@@ -1,10 +1,8 @@
 import React from "react";
-import ErrorBoundary from "../components/ErrorBoundary.jsx";
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
-import MainContainer from './MainContainer.jsx';
-
-import '../styles/App.css';
+import ErrorBoundary from "../ErrorBoundary";
+import Header from "../Header";
+import Footer from "../Footer";
+import MainContainer from '../MainContainer';
 
 const App = () =>  (
     <>
