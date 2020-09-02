@@ -1,6 +1,7 @@
 .counter-container {
     color: #ffffff;
     font-size: 1.5rem;
+    display: inline-block;
 }
 
 .counter-container .count{
