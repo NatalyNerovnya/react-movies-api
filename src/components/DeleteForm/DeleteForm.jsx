@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "../../containers/Modal";
 
-class AddForm extends React.Component {
+class DeleteForm extends React.Component {
     constructor(props){
         super(props);
         this.state = {isActive: false};
@@ -36,4 +36,4 @@ class AddForm extends React.Component {
     }
 }
 
-export default AddForm;
+export default DeleteForm;
