@@ -3,17 +3,13 @@ import PropTypes from 'prop-types';
 
 const MoviesCounter = (props) => {
     return <div className="counter-container">
-      <span className="count">{props.count}</span>
+      <span className="count">{props.movies ? props.movies.length : "No"}</span>
       <span> movies found</span>
     </div>
 }
 
 MoviesCounter.propTypes = {
-  count: PropTypes.number
-}
-
-MoviesCounter.defaultProps = {
-    count: 0
+  movies: PropTypes.array
 }
 
 export default MoviesCounter;
