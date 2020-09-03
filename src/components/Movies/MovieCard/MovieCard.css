@@ -31,3 +31,53 @@
 p {
     color: #808080;
 }
+
+.image-button {
+    width: 3rem;
+    font-size: 2rem;
+    border: solid 1px;
+    border-radius: 50%;
+    height: 3rem;
+    text-align: center;
+    background-color: #424242;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+}
+
+.image-container:hover .image-button{
+    display: inherit;
+}
+
+.image-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.image-menu{
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    background-color: #424242;
+    padding: 1rem;
+    border-radius: 10px;
+    display: none;
+}
+
+.image-container:hover .image-menu{
+    display: inherit;
+}
+
+
+.image-container:hover .image-menu:hover .modal-button:hover{
+    background-color: #f65261;
+}
+
+.image-menu .modal-button{
+    display: block;
+    width: 10rem;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+}

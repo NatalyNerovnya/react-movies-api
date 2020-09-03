@@ -35,7 +35,7 @@ class EditForm extends React.Component {
         <input className="input" value={this.state.movie.year} />
 
         <span className="label">MOVIE URL</span>
-        <input className="input" value={this.state.movie.url}/>
+        <input className="input" value={this.state.movie.imageUrl}/>
 
         <span className="label">OVERVIEW</span>
         <input className="input" />
