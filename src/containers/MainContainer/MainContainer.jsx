@@ -8,7 +8,7 @@ class MainContainer extends React.Component {
         debugger;
         super(props);
         this.state = { movies: []};
-    this.handleSort = this.handleSort.bind(this);
+        this.handleSort = this.handleSort.bind(this);
     }
 
     componentDidMount(){
@@ -31,8 +31,6 @@ class MainContainer extends React.Component {
         }
     ]});
     }
-
-    componentDidUpdate(){}
 
     handleSort(sortedMovies){
         this.setState({movies: sortedMovies});

@@ -1,39 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "../../containers/Modal";
 
-class DeleteForm extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {isActive: false};
-        this.close = this.close.bind(this);
-        this.open = this.open.bind(this);
-    }
+const DeleteForm = () => {
+    const [isActive, setIsActive] = useState(false);
     
-    close(e){
+    const close = (e) => {
         e.preventDefault();
-        this.setState({isActive: false})
+        setIsActive(false);
     }
 
-    open(e){
+    const open = (e) => {
         e.preventDefault();
-        this.setState({isActive: true})
+        setIsActive(true);
     }
 
-    render(){
-        return <Modal
+    return <Modal
             buttonClass=""
             buttonText="DELETE"
-            isActive={this.state.isActive}
-            close={this.close}
-            open={this.open}
+            isActive={isActive}
+            close={close}
+            open={open}
             label="DELETE MOVIE"> 
         
         <p>Are you sure you want to delete this movie?</p>
         <div className="buttons">
-            <div className="submit" onClick={(e) => this.close(e)}>CONFIRM</div>
+            <div className="submit" onClick={(e) => close(e)}>CONFIRM</div>
         </div>
     </Modal> 
-    }
 }
 
 export default DeleteForm;
