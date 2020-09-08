@@ -1,41 +1,36 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import Modal from "../../containers/Modal";
 
-class EditForm extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {isActive: false, movie: props.movie};
-        this.close = this.close.bind(this);
-        this.open = this.open.bind(this);
-    }
+const EditForm = (props) => {
+    const [isActive, setIsActive] = useState(false);
+    const [movie, setMovie] = useState(props.movie);
     
-    close(e){
+    const close = useCallback(e => {
         e.preventDefault();
-        this.setState({isActive: false})
-    }
+        setIsActive(false);
+    }, []);
 
-    open(e){
+    const open = useCallback(e => {
         e.preventDefault();
-        this.setState({isActive: true})
-    }
+        setIsActive(true);
+    }, []);
 
-    render(){
-        return <Modal
+    return <Modal
             buttonClass=""
             buttonText="EDIT"
-            isActive={this.state.isActive}
-            close={this.close}
-            open={this.open}
+            isActive={isActive}
+            close={close}
+            open={open}
             label="EDIT MOVIE"> 
         
         <span className="label">TITLE</span>
-        <input className="input" value={this.state.movie.title}/>
+        <input className="input" value={movie.title}/>
 
         <span className="label">RELEASE DATE</span>
-        <input className="input" value={this.state.movie.year} />
+        <input className="input" value={movie.year} />
 
         <span className="label">MOVIE URL</span>
-        <input className="input" value={this.state.movie.imageUrl}/>
+        <input className="input" value={movie.imageUrl}/>
 
         <span className="label">OVERVIEW</span>
         <input className="input" />
@@ -44,11 +39,10 @@ class EditForm extends React.Component {
         <input className="input" />
 
         <div className="buttons">
-            <div className="reset" onClick={(e) => this.close(e)}>RESET</div>
-            <div className="submit" onClick={(e) => this.close(e)}>SAVE</div>
+            <div className="reset" onClick={(e) => close(e)}>RESET</div>
+            <div className="submit" onClick={(e) => close(e)}>SAVE</div>
         </div>
     </Modal> 
-    }
 }
 
 export default EditForm;

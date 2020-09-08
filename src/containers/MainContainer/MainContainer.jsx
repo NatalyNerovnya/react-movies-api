@@ -25,7 +25,7 @@ class MainContainer extends React.Component {
             id: 2
         }, {
             genres: ["any genre", "asdasdasd", "asdasd"],
-            imageUrl: "https://i.pinimg.com/originals/f6/e9/6e/f6e96e7bcf7aee8f5619f215dc02f3f5.jpg",
+            imageUrl: "https://lh3.googleusercontent.com/proxy/Mpo2jr9lthXt1KqN484R_CSIRLQ46FYsCbznaWHJCITVCcCVIptMw0AvkSkSlTj6YuMkcYeBoMS-c5-1-a3-tMVlwGBGaUKkhYuhmPNExkhibw8",
             id: 3,
             year: 2011
         }

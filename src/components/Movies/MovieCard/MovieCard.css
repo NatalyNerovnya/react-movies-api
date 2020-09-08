@@ -1,9 +1,6 @@
 .card {
     color: #8e8e8e;
     display: inline-block;
-    height: 35rem;
-    width: 33%;
-    min-width: 30rem;
 }
 
 .year {
@@ -23,8 +20,6 @@
 .image {
     width: 99%;
     height: 99%;
-    margin-left: auto;
-    margin-right: auto;
     display: block;
 }
 
@@ -53,6 +48,8 @@ p {
 .image-container {
     position: relative;
     cursor: pointer;
+    width: 50rem;
+    height: 60rem;
 }
 
 .image-menu{

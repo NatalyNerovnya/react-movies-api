@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Modal from "../../containers/Modal";
 
 const DeleteForm = () => {
     const [isActive, setIsActive] = useState(false);
     
-    const close = (e) => {
+    const close = useCallback(e => {
         e.preventDefault();
         setIsActive(false);
-    }
+    }, []);
 
-    const open = (e) => {
+    const open = useCallback(e => {
         e.preventDefault();
         setIsActive(true);
-    }
+    }, []);
 
     return <Modal
             buttonClass=""
