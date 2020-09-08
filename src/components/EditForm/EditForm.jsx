@@ -1,19 +1,14 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import Modal from "../../containers/Modal";
+import usePreventDefault from './../../utils/hooks/usePreventDefault';
 
 const EditForm = (props) => {
     const [isActive, setIsActive] = useState(false);
     const [movie, setMovie] = useState(props.movie);
     
-    const close = useCallback(e => {
-        e.preventDefault();
-        setIsActive(false);
-    }, []);
+    const close = usePreventDefault(() => { setIsActive(false) });
 
-    const open = useCallback(e => {
-        e.preventDefault();
-        setIsActive(true);
-    }, []);
+    const open = usePreventDefault(() => { setIsActive(true) });
 
     return <Modal
             buttonClass=""

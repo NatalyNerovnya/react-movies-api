@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import usePreventDefault from './../../utils/hooks/usePreventDefault';
 
 const getSortOption = (sortField) => {
     switch(sortField){
@@ -10,25 +11,23 @@ const getSortOption = (sortField) => {
     }
 };
 
-const sort = (movies, field, handler, e) => {
-    debugger;
-    let sortedMovies = movies.sort((a, b) => {
-        if (a[field] > b[field]) {
-            return 1;
-          }
-          if (a[field] < b[field]) {
-            return -1;
-          }
-          return 0;
-    });
-    e.preventDefault();
-    handler(sortedMovies);
-}
-
 const Sort = (props) => {
+    const sort = usePreventDefault((movies, field, handler) => {
+        let sortedMovies = movies.sort((a, b) => {
+            if (a[field] > b[field]) {
+                return 1;
+              }
+              if (a[field] < b[field]) {
+                return -1;
+              }
+              return 0;
+        });
+        handler(sortedMovies);
+    });
+    
     return <div className="sort-container">
         <span className="sort-label">SORT BY</span>
-        <a href="" className="sort-option" onClick={(e) => sort(props.movies, props.sortField, props.handler, e)}>{getSortOption(props.sortField)}</a>
+        <a href="" className="sort-option" onClick={(e) => sort(props.movies, props.sortField, props.handler)}>{getSortOption(props.sortField)}</a>
     </div>
 };
 

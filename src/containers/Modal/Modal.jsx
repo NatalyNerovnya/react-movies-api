@@ -1,16 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import usePreventDefault from './../../utils/hooks/usePreventDefault';
 
 const Modal = (props) => {
-    const close = (e) => {
-        e.preventDefault();
-        props.close(e);
-    }
+    const close = usePreventDefault((e) => { props.close(e) });
 
-    const open = (e) => {
-        e.preventDefault();
-        props.open(e);
-    }
+    const open = usePreventDefault((e) => { props.open(e) });
 
     return <>
     <div onClick={(e) => open(e)} className={props.buttonClass + " modal-button"}>{props.buttonText}</div>

@@ -1,11 +1,9 @@
-import React, { useCallback } from "react";
+import React from "react";
+import usePreventDefault from './../../utils/hooks/usePreventDefault';
 
 const MovieDetails = (props) => {
 
-    const close = useCallback((e) => {
-        e.preventDefault();
-        props.handleClose();
-    }, []);
+    const close = usePreventDefault(() => { props.handleClose(); });
 
     return <>
         <a className="details-close" onClick={close}>&#8981;</a>
