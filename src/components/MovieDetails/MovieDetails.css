@@ -5,3 +5,17 @@
     margin-right: 2rem;
     cursor: pointer;
 }
+
+.details-image {
+    display: inline-block;
+    margin: 2rem;
+    height: 35rem;
+}
+
+.details-info-container{
+    width: 60%;
+    display: inline-block;
+    margin: 2rem;
+    position: absolute;
+    top: 10rem;
+}
