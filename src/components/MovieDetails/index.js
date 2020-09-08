@@ -1,3 +1,3 @@
 import "./MovieDetails.css"
 
-export { default } from "./MovieDetails.jsx.js";
+export { default } from "./MovieDetails.jsx";
